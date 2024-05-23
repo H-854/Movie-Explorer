@@ -1,0 +1,18 @@
+{
+  "name": "internship-task",
+  "version": "1.0.0",
+  "description": "This is an task for my internship assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "H854",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2",
+    "request": "^2.88.2"
+  }
+}
