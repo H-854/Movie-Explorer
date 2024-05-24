@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship task</title>
-</head>
+<% layout("/layouts/boilerplate.ejs") %>
 <body>
-    <h1>Movie Explorer</h1>
-    <form action="/search">
-        <input type="text" placeholder="Search movie" name="title" id="title">
-        <button>Search</button>
-    </form>
+    <div class="container-fluid ps-5">
+        <h1 class="text-white offset-2">Movie Explorer</h1>
+        <form class="d-flex" role="search" action="/search">
+            <input class="form-control me-2 w-50 offset-2" type="search" placeholder="Search" aria-label="Search" name="title" id="title">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
 </body>
-</html>

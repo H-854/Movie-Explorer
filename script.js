@@ -5,12 +5,14 @@ const path = require('path');
 const ExpressError = require("./ExpressError.js");
 const wrapAsync = require("./wrapAsync.js");
 const { copyFileSync } = require("fs");
-
+const engine = require('ejs-mate')
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"/views"));
+app.engine('ejs', engine);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname,"/public")));
 
 app.get("/",(req,res,next)=>{
     try{
