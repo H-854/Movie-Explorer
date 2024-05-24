@@ -4,6 +4,7 @@
   "description": "This is an task for my internship assessment",
   "main": "index.js",
   "scripts": {
+    "start": "node script.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "H854",
