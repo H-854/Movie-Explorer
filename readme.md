@@ -16,7 +16,7 @@ This is a simple Node.js web application built using Express.js that allows user
 - **views/**: Contains the EJS templates for rendering the HTML pages.
   - `index.ejs`: The main search page.
   - `movie.ejs`: The movie details page.
-- **app.js**: Main application file where the Express server is configured.
+- **index.js**: Main application file where the Express server is configured.
 - **ExpressError.js**: Custom error handling class.
 - **wrapAsync.js**: Utility function for wrapping asynchronous route handlers to catch errors.
 - **package.json**: Contains the project dependencies and scripts.
@@ -40,7 +40,7 @@ This is a simple Node.js web application built using Express.js that allows user
 
 ## Code Overview
 
-### `app.js`
+### `index.js`
 
 - **Configuration**: Sets up the view engine and the views directory.
   
@@ -162,7 +162,7 @@ Error handling in Express.js involves defining middleware functions that handle 
 ### File Structure
 
 The application is organized into different files and directories:
-- **`app.js`**: The main application file where Express is configured, routes are defined, and middleware is applied.
+- **`index.js`**: The main application file where Express is configured, routes are defined, and middleware is applied.
 - **`views/`**: Directory containing EJS templates for rendering HTML pages.
 - **`ExpressError.js`**: Defines a custom error class for consistent error handling.
 - **`wrapAsync.js`**: Utility function to wrap async route handlers and manage errors.
