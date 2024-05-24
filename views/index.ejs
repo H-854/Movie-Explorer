@@ -2,10 +2,13 @@
 <body>
     <div class="container-fluid ps-5">
         <h1 class="text-white offset-2">Movie Explorer</h1>
-        <form class="d-flex" role="search" action="/search">
-            <input class="form-control me-2 w-50 offset-2" type="search" placeholder="Search" aria-label="Search" name="title" id="title">
+        <form class="d-flex needs-validation"  action="/search" novalidate>
+            <input class="form-control me-2 w-50 offset-2" type="text" placeholder="Search" name="title" id="title" required>
             <button class="btn btn-outline-success" type="submit">Search</button>
             <a href="https://github.com/H-854/Movie-Explorer" style="text-decoration: none;" class="btn btn-outline-success ms-3">Github</a>
         </form>
+        <div class="invalid-feedback">
+            Oop! Can't search an empty name
+        </div>
     </div>
 </body>
