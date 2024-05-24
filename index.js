@@ -26,8 +26,13 @@ app.get("/",(req,res,next)=>{
 app.get('/search', wrapAsync(async (req, res)=>{
     let { title } = req.query;
     const response = await axios.get(`https://www.omdbapi.com/?t=${title}&apikey=60c9c38e`);
-    let movie = response.data;
-    res.render("movie.ejs",{ movie });
+    if(response.data.Error){
+        throw new ExpressError(404,response.data.Error);
+    }
+    else{
+        let movie = response.data;
+        res.render("movie.ejs",{ movie });
+    }
 }))
 
 app.all("*",(req,res,next)=>{
@@ -35,7 +40,7 @@ app.all("*",(req,res,next)=>{
 })
 app.use((err,req,res,next)=>{
     let {status= 500,message="SOME ERROR"} = err;
-    res.status(status).send(message);
+    res.status(status).render("error.ejs",{message});
 })
 app.listen(3000,()=>{
     console.log("Server listening to port : ",3000);

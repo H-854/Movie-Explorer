@@ -1,0 +1,17 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<style>
+    .div{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50px,50px);
+    }
+</style>
+<body style="color: white;">
+    <div class="div">
+        <h1>Error</h1>
+        <p><%= message %></p>
+        <a href="/" class="btn btn-outline-success">Back</a>
+    </div>
+</body>
+
