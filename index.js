@@ -25,7 +25,7 @@ app.get("/",(req,res,next)=>{
 
 app.get('/search', wrapAsync(async (req, res)=>{
     let { title } = req.query;
-    const response = await axios.get(`https://www.omdbapi.com/?t=${title}&apikey=60c9c38e`);
+    const response = await axios.get(`https://www.omdbapi.com/?t=${title}&apikey`);
     if(response.data.Error){
         throw new ExpressError(404,response.data.Error);
     }
